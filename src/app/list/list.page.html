@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title id="header-title"></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content id="content-list" padding class="letsstart">
+    <ion-searchbar autocorrect="off" placeholder="{{ 'Find' | translate }}" (input)="filterList($event)" autofocus></ion-searchbar>
+    <ion-toolbar>
+        <ion-list>
+            <ion-item *ngFor="let place of places" [routerLink]="'/tabs/home/showPlace/' + place.id" class="item">
+                <ion-label>{{place.name}}</ion-label>
+            </ion-item>
+        </ion-list>
+    </ion-toolbar>
+</ion-content>

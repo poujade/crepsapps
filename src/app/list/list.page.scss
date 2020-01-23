@@ -1,0 +1,16 @@
+.background {
+    background-size: cover;
+    background-position: center;
+}
+
+ion-list {
+    background: transparent;
+}
+
+ion-item {
+    --background: rgba(255, 255, 255, 0.8);
+}
+
+ion-toolbar {
+    z-index: 0
+}

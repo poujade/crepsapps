@@ -1,0 +1,156 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+</style>
+
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{ 'Access' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="language" data-lang="fr">
+        <img src="assets/imgs/bus.jpg" />
+        <h2 class="transports">
+            <ion-icon name="bus"></ion-icon>{{ 'Public transport' | translate }}
+        </h2>
+        <br>
+        <ion-grid>
+            <ion-row nowrap>
+                <ion-col>
+                    <a href="https://www.ratp.fr/sites/default/files/lines-assets/plan-de-ligne/rer/plan-de-ligne_rer_ligne-b.1504861848.pdf" target="_blank"> <img src="assets/imgs/rer-b.jpg" class="rerb" /> </a>
+                    <b class="transport">{{ 'Robinson' | translate }} </b>
+                </ion-col>
+                <ion-col>
+                    <a href="https://www.ratp.fr/sites/default/files/plans-lignes/Reseaux/Bus-Noctilien/Bus/194.pdf" target="_blank"> <img src="assets/imgs/plan-194.jpg" class="bus" /> </a> <br>
+                    <a href="https://www.ratp.fr/sites/default/files/plans-lignes/Reseaux/Bus-Noctilien/Bus/294.pdf" target="_blank"> <img src="assets/imgs/plan-294.jpg" class="bus" /> </a>
+                </ion-col>
+                <ion-col class="arret">
+                    <div>{{ 'Docteur Le Savoureux' | translate }}</div>
+                </ion-col>
+            </ion-row>
+            <br>
+            <ion-row nowrap>
+                <ion-col>
+                    <a href="https://www.ratp.fr/sites/default/files/lines-assets/plan-de-ligne/rer/plan-de-ligne_rer_ligne-b.1504861848.pdf" target="_blank"> <img src="assets/imgs/rer-b.jpg" class="rerb" /> </a>
+                    <b class="transport">{{ 'Berny\'s Croix' | translate }}</b>
+                </ion-col>
+                <ion-col>
+                    <a href="https://www.ratp.fr/sites/default/files/lines-assets/plan-de-ligne/busratp/plan-de-ligne_busratp_ligne-195.1504876169.pdf" target="_blank"><img src="assets/imgs/planbus-195.jpg" class="bus" /> </a> <br>
+                    <a href="https://www.ratp.fr/sites/default/files/plans-lignes/Reseaux/Bus-Noctilien/Bus/379.pdf" target="_blank"> <img src="assets/imgs/plan-379.jpg" class="bus" /> </a>
+                </ion-col>
+                <ion-col class="arret">
+                    <div>{{ 'President Allende' | translate }}</div>
+                </ion-col>
+            </ion-row>
+            <br>
+            <ion-row nowrap>
+                <ion-col>
+                    <a href="https://www.ratp.fr/sites/default/files/lines-assets/plan-de-ligne/metro/plan-de-ligne_metro_ligne-13.1547821800.pdf" target="_blank"><img src="assets/imgs/M13.jpg" class="M13" /></a>
+                    <b class="transport"> {{ 'Châtillon-Montrouge' | translate }}</b>
+                </ion-col>
+                <ion-col>
+                    <br>
+                    <img src="assets/imgs/plan-194.jpg" class="bus" />
+                </ion-col>
+                <ion-col>
+                    <b>{{ 'Docteur Le Savoureux' | translate }}</b>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <img src="assets/imgs/plane.jpg" />
+        <h2 class="plane">
+            <ion-icon name="airplane"></ion-icon>{{ 'Plane' | translate }}
+        </h2>
+        <h3>{{ 'Paris Charle De Gaulle Airport' | translate }} </h3>
+        <br>
+        <ion-grid class="step-container" data-name="planeA">
+            <ion-row class="step-item">
+                <div class="step-item-header">
+                    <ion-button (click)="stepperChange('planeA',  1)">1</ion-button> <span><b>{{'Take a RER B' | translate}}</b></span>
+                </div>
+                <div class="step-item-content">
+                    <a href="https://www.ratp.fr/sites/default/files/lines-assets/plan-de-ligne/rer/plan-de-ligne_rer_ligne-b.1504861848.pdf" target="_blank"> <img src="assets/imgs/rer-b.jpg" class="rerb1" /> </a>
+                    <b>{{ 'Robinson' | translate }}</b>
+                    <div id="step-item-control">
+                        <ion-button (click)="stepperChange('planeA', 2)" color="medium">{{'Next' | translate}}</ion-button>
+                    </div>
+                </div>
+            </ion-row>
+            <ion-row class="step-item">
+                <div class="step-item-header">
+                    <ion-button (click)="stepperChange('planeA',  2)">2</ion-button> <span><b>{{'Take a bus' | translate }} </b></span>
+                </div>
+                <div class="step-item-content">
+                    <a href="https://www.ratp.fr/sites/default/files/plans-lignes/Reseaux/Bus-Noctilien/Bus/194.pdf" target="_blank"> <img src="assets/imgs/plan-194.jpg" class="busA" /> </a>
+                    <a href="https://www.ratp.fr/sites/default/files/plans-lignes/Reseaux/Bus-Noctilien/Bus/294.pdf" target="_blank"> <img src="assets/imgs/plan-294.jpg" class="busA" /> </a>
+                    <br>
+                    <b>{{ 'Docteur Le Savoureux' | translate }}</b>
+                    <div class="step-item-control">
+                        <ion-button (click)="stepperChange('planeA', 1)" color="medium" id="previous">{{'Previous' | translate}}</ion-button>
+                    </div>
+                </div>
+            </ion-row>
+        </ion-grid>
+        <h3> {{ 'Paris Orly Airport' | translate }}</h3>
+        <br>
+        <ion-grid class="step-container" data-name="planeO">
+            <ion-row class="step-item">
+                <div class="step-item-header">
+                    <ion-button (click)="stepperChange('planeO', 1)">1</ion-button> <span><b>{{'Take a shuttle Orlyval' | translate}}</b></span>
+                </div>
+                <div class="step-item-content">
+                    <a href="https://fr.map-of-paris.com/plans-m%C3%A9tro/plan-orlyval#&gid=1&pid=1" target="_blank"><img src="assets/imgs/orlyval.jpg" class="orlyval" /><br></a>
+                    <b>{{ 'Anthony Station' | translate }} </b>
+
+                    <div id="step-item-control">
+                        <ion-button (click)="stepperChange('planeO', 2)" color="medium">{{'Next' | translate}}</ion-button>
+                    </div>
+                </div>
+            </ion-row>
+            <ion-row class="step-item">
+                <div class="step-item-header">
+                    <ion-button (click)="stepperChange('planeO', 2)">2</ion-button> <span><b>{{'Take a RER B' | translate}}</b></span>
+                </div>
+                <div class="step-item-content">
+                    <a href="https://www.ratp.fr/sites/default/files/lines-assets/plan-de-ligne/rer/plan-de-ligne_rer_ligne-b.1504861848.pdf" target="_blank"> <img src="assets/imgs/rer-b.jpg" class="rerb1" /> </a>
+                    <b>{{ 'Berny\'s Croix' | translate }}</b>
+                    <div id="step-item-control">
+                        <ion-button (click)="stepperChange('planeO', 1)" color="medium" id="previous1">{{'Previous' | translate}}</ion-button>
+                        <ion-button (click)="stepperChange('planeO', 3)" color="medium" id="next1">{{'Next' | translate}}</ion-button>
+                    </div>
+                </div>
+            </ion-row>
+            <ion-row class="step-item">
+                <div class="step-item-header">
+                    <ion-button (click)="stepperChange('planeO', 3)">3</ion-button> <span><b>{{'Take a bus' | translate }}</b></span>
+                </div>
+                <div class="step-item-content">
+                    <a href="https://www.ratp.fr/sites/default/files/lines-assets/plan-de-ligne/busratp/plan-de-ligne_busratp_ligne-195.1504876169.pdf" target="_blank"><img src="assets/imgs/planbus-195.jpg" class="busA" /> </a>
+                    <br>
+                    <b> {{ 'President Allende' | translate }}</b>
+                    <div id="step-item-control">
+                        <ion-button (click)="stepperChange('planeO', 2)" color="medium" id="previous">{{'Previous' | translate}}</ion-button>
+                    </div>
+                </div>
+            </ion-row>
+        </ion-grid>
+        <img src="assets/imgs/car.jpg" />
+        <h2 class="car">
+            <ion-icon name="car"></ion-icon> {{ 'Car' | translate }}
+        </h2>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <p> {{ 'The CREPS d\'Ile de France is near of the exit Châtenay-Malabry on highway A86' | translate }} </p>
+                    <div id="info">
+                        <div> {{ 'From north : Highway A1' | translate }} </div>
+                        <div> {{ 'From north : Highway A1' | translate }} </div>
+                        <div> {{ 'From east : Highway A4 or A5' | translate }} </div>
+                        <div> {{ 'From south : Highway A6 or A4' | translate }} </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

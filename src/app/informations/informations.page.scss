@@ -1,0 +1,68 @@
+#top-picture {
+    display: block;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-image: url('/assets/imgs/home.jpg');
+    height: 30%;
+}
+
+.icon {
+    color: rgb(255, 108, 108);
+}
+
+div {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.urgence {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+.day {
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+ion-chip {
+    margin-top: 1rem;
+    margin: auto;
+    display: block;
+    line-height: 1rem;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-style: italic;
+}
+
+ion-content {
+    white-space: nowrap;
+    --padding-bottom: 3rem;
+}
+
+.map {
+    display: block;
+    color: white;
+    height: 2rem;
+    width: 2rem;
+}
+
+ion-fab-button {
+    --background: #2e5b99;
+}

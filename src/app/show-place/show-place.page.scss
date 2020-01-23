@@ -1,0 +1,40 @@
+.place-data-icon {
+  font-size: 1.5rem;
+}
+
+.place-data-title,
+.place-data-number {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+#equipment-title {
+  text-align: center;
+  font-size: 1rem;
+  margin: 1rem;
+  font-weight: bold;
+  color: #666666;
+}
+
+.data-info {
+  margin-top: 1rem;
+}
+
+.find {
+  font-family: "Montserrat", sans-serif;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  padding: auto;
+}
+
+@keyframes fab-animation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}

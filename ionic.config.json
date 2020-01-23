@@ -1,0 +1,8 @@
+{
+  "name": "CrepsApp",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

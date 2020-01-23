@@ -1,0 +1,75 @@
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+</style>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ place.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img *ngFor="let picture of place.pictures" src="assets/imgs/photos/{{ picture }}"></ion-img>
+    <div [ngClass]="place.hasOwnProperty('surface') || place.hasOwnProperty('capacity') ? 'data-info' : ''">
+      <ion-row *ngIf="place.hasOwnProperty('surface')">
+        <ion-col class="place-data-icon">
+          <ion-icon name="expand"></ion-icon>
+        </ion-col>
+        <ion-col class="place-data-title" size="6">{{ "Surface" | translate }}</ion-col>
+        <ion-col class="place-data-number">{{ place.surface }}m²</ion-col>
+      </ion-row>
+      <ion-row *ngIf="place.hasOwnProperty('capacity')">
+        <ion-col class="place-data-icon">
+          <ion-icon name="people"></ion-icon>
+        </ion-col>
+        <ion-col class="place-data-title" size="6">{{ "Capacity" | translate }}</ion-col>
+        <ion-col class="place-data-number">{{ place.capacity }}</ion-col>
+      </ion-row>
+      <ng-container *ngIf="place.hasOwnProperty('equipments')">
+        <ion-row>
+          <ion-col id="equipment-title">{{ "Equipments" | translate }}</ion-col>
+        </ion-row>
+        <ng-container *ngFor="let equipment of place.equipments">
+          <ion-row *ngIf="equipment == 'video'">
+            <ion-col class="place-data-icon" size="3">
+              <ion-icon name="videocam"></ion-icon>
+            </ion-col>
+            <ion-col class="place-data-title">{{ "Projector" | translate }}</ion-col>
+          </ion-row>
+          <ion-row *ngIf="equipment == 'sono'">
+            <ion-col class="place-data-icon" size="3">
+              <ion-icon name="volume-high"></ion-icon>
+            </ion-col>
+            <ion-col class="place-data-title">{{ "Sound system" | translate }}</ion-col>
+          </ion-row>
+        </ng-container>
+      </ng-container>
+      <ng-container *ngIf="place.hasOwnProperty('phone')">
+        <ion-row>
+          <ion-col class="place-data-icon" size="3">
+            <ion-icon name="call"></ion-icon>
+          </ion-col>
+          <ion-col class="place-data-number">
+            <a href="tel:{{ place.phone }}">{{ place.phone }}</a>
+          </ion-col>
+        </ion-row>
+      </ng-container>
+      <ng-container *ngIf="place.hasOwnProperty('opening')">
+        <ion-row>
+          <ion-col class="find">
+            <ion-icon class="place-data-icon" size="3" name="time"></ion-icon>
+            <div [innerHTML]="place.opening | translate"></div>
+          </ion-col>
+        </ion-row>
+      </ng-container>
+    </div>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button ion-fab (click)="goTo(place.latitude, place.longitude)">
+      <ion-icon name="walk"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

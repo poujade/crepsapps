@@ -1,0 +1,87 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+</style>
+
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{ 'Informations' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+<div id="top-picture"></div>
+<ion-content>
+    <h3>{{'Opening time' | translate}}</h3>
+    <div class="day">{{'Monday-Friday' | translate }}</div>
+    <div> 7h30-20h </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <a href="tel:+33141872030" target="_blank">
+                    <ion-chip color="danger">
+                        <ion-icon class="icon" name="call"></ion-icon>
+                        <ion-label>{{'Reception' | translate }} </ion-label>
+                    </ion-chip>
+                </a>
+            </ion-col>
+            <ion-col>
+                <a href="mailto:accueil@creps-idf.fr">
+                    <ion-chip color="danger">
+                        <ion-icon class="icon" name="mail"></ion-icon>
+                        <ion-label>{{'Contact us' | translate}}</ion-label>
+                    </ion-chip>
+                </a>
+            </ion-col>
+            <ion-col>
+                <a href="https://www.creps-idf.fr" target="_blank">
+                    <ion-chip color="danger">
+                        <ion-icon class="icon" name="globe"></ion-icon>
+                        <ion-label>{{'CREPS Île-De-France' | translate }}</ion-label>
+                    </ion-chip>
+                </a>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <br>
+    <div class="urgence">{{'In case of difficulty' | translate }}</div>
+    <ion-grid class="container">
+        <ion-row>
+            <ion-col>
+                <a href="tel:+33670047933" target="_blank">
+                    <ion-chip color="danger">
+                        <ion-icon class="icon" name="call"></ion-icon>
+                        <ion-label>{{ 'Technical standby personnel' | translate }}</ion-label>
+                    </ion-chip>
+                </a>
+            </ion-col>
+            <ion-col>
+                <a href="tel:+33680995465" target="_blank">
+                    <ion-chip color="danger">
+                        <ion-icon class="icon" name="call"></ion-icon>
+                        <ion-label>{{ 'Administrative standby personnel' | translate }} </ion-label>
+                    </ion-chip>
+                </a>
+            </ion-col>
+            <ion-col>
+                <a href="tel:+33670745121" target="_blank">
+                    <ion-chip color="danger">
+                        <ion-icon class="icon" name="call"></ion-icon>
+                        <ion-label>{{ 'Referent home' | translate }} </ion-label>
+                    </ion-chip>
+                </a>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<ion-fab class="help" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+        <a href="https://www.creps-idf.fr/assets/images/creps/209-05-27_plan-creps.pdf" target="_blank">
+            <ion-icon class="map" name="map"></ion-icon>
+        </a>
+    </ion-fab-button>
+</ion-fab>
+<ion-fab class="help" vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button>
+        <a href="https://www.google.com/maps/search/?api=1&query=CREPS+IDF+Chatenay+Malabry" target="_blank">
+            <ion-icon class="map" name="pin"></ion-icon>
+        </a>
+    </ion-fab-button>
+</ion-fab>

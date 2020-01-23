@@ -1,0 +1,122 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+</style>
+<ion-content>
+    <ion-grid id="social-row">
+        <ion-row nowrap>
+            <ion-col>
+                <ion-chip color="danger">
+                    <a href="https://www.facebook.com/CREPSIleDeFrance/" target="_blank">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </ion-chip>
+            </ion-col>
+            <ion-col>
+                <ion-chip color="danger">
+                    <a href="https://twitter.com/crepsidf" target="_blank">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </ion-chip>
+            </ion-col>
+            <ion-col>
+                <ion-chip color="danger">
+                    <a href="https://fr.linkedin.com/company/creps-%C3%AEle-de-france" target="_blank">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </ion-chip>
+            </ion-col>
+            <ion-col>
+                <ion-chip color="danger">
+                    <a href="https://www.instagram.com/crepsidf" target="_blank">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </ion-chip>
+            </ion-col>
+            <ion-col>
+                <ion-chip color="danger">
+                    <a href="https://vimeo.com/user48243281" target="_blank">
+                        <ion-icon name="logo-vimeo"></ion-icon>
+                    </a>
+                </ion-chip>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div class="hr"> </div>
+    <div class="logo">
+        <img src="assets/imgs/logo-creps.jpg" />
+    </div>
+    <ion-grid id="services">
+        <ion-row nowrap>
+            <ion-col>
+                <ion-card id="installations-card" (click)="showList('installations', 'Installations')">
+                    <div class="card-icon">
+                        <ion-icon name="baseball" slot="start"></ion-icon>
+                    </div>
+                    <div class="card-content">
+                        <ion-card-title>{{ 'Installations' | translate }}</ion-card-title>
+                    </div>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row nowrap>
+            <ion-col>
+                <ion-card id="rooms-card" (click)="showList('rooms', 'Rooms')">
+                    <div class="card-icon">
+                        <ion-icon name="school" slot="start"></ion-icon>
+                    </div>
+                    <div class="card-content">
+                        <ion-card-title>{{ 'Rooms' | translate }}</ion-card-title>
+                    </div>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row nowrap>
+            <ion-col>
+                <ion-card id="accommodations-card" (click)="showList('accommodations', 'Accommodations')">
+                    <div class="card-icon">
+                        <ion-icon name="moon" slot="start"></ion-icon>
+                    </div>
+                    <div class="card-content">
+                        <ion-card-title>{{ 'Accommodations' | translate }}</ion-card-title>
+                    </div>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row nowrap>
+            <ion-col>
+                <ion-card id="conveniences-card" (click)="showList('conveniences', 'Conveniences')">
+                    <div class="card-icon">
+                        <ion-icon name="restaurant" slot="start"></ion-icon>
+                    </div>
+                    <div class="card-content">
+                        <ion-card-title>{{ 'Conveniences' | translate }}</ion-card-title>
+                    </div>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row nowrap>
+            <ion-col>
+                <ion-card id="departments-card" (click)="showList('departments', 'Departments')">
+                    <div class="card-icon">
+                        <ion-icon name="people" slot="start"></ion-icon>
+                    </div>
+                    <div class="card-content">
+                        <ion-card-title>{{ 'Departments' | translate }}</ion-card-title>
+                    </div>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+        <ion-row nowrap>
+            <ion-col>
+                <ion-card id="near-card" (click)="showList('near', 'Near')">
+                    <div class="card-icon">
+                        <ion-icon name="pricetag" slot="start"></ion-icon>
+                    </div>
+                    <div class="card-content">
+                        <ion-card-title>{{ 'Near' | translate }}</ion-card-title>
+                    </div>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

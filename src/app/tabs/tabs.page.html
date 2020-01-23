@@ -1,0 +1,27 @@
+<ion-tabs>
+    <!--
+  <ion-tab label="{{ 'Home' | translate }}" icon="home" href="/tabs/(home:home)">
+    <ion-router-outlet name="home"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab label="{{ 'Informations' | translate }}" icon="information-circle" href="/tabs/(informations:informations)">
+    <ion-router-outlet name="informations"></ion-router-outlet>
+  </ion-tab>
+  <ion-tab label="{{ 'Access' | translate }}" icon="information-circle" href="/tabs/(access:access)">
+    <ion-router-outlet name="access"></ion-router-outlet>
+  </ion-tab>
+  -->
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+            <ion-icon name="home"></ion-icon>
+            <ion-label>{{ 'Home' | translate }}</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="informations">
+            <ion-icon name="information-circle"></ion-icon>
+            <ion-label>{{ 'Informations' | translate }}</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="access">
+            <ion-icon name="car"></ion-icon>
+            <ion-label>{{ 'Access' | translate }}</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>

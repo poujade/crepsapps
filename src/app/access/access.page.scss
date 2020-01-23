@@ -1,0 +1,168 @@
+img {
+    display: block;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    background-color: #CCCCCC;
+    line-height: 3rem;
+    text-align: right;
+    padding-right: 1rem;
+    margin: 0;
+}
+
+h2>ion-icon {
+    float: left;
+    height: 3rem;
+    margin-left: 0.5rem;
+}
+
+h3 {
+    margin-left: 1rem;
+    font-weight: bold;
+    color: #800F00;
+    text-shadow: white;
+}
+
+.bus {
+    max-width: 40%;
+}
+
+.busA {
+    max-width: 40%;
+}
+
+.orlyval {
+    max-width: 40%;
+}
+
+.rerb {
+    width: 50%;
+}
+
+.rerb1 {
+    max-width: 20%;
+}
+
+.arret {
+    position: relative;
+}
+
+.arret>div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+.M13 {
+    width: 50%;
+}
+
+.B194 {
+    max-width: 40%
+}
+
+.step-item-header {
+    width: 100%;
+}
+
+.step-item-header ion-button {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+#step-item-control #next {
+    border-radius: 2px;
+    width: 20%;
+    height: 20%;
+    color: white;
+}
+
+#step-item-control #previou {
+    border-radius: 2px;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+#step-item-control #next1 #next2 {
+    border-radius: 2px;
+    width: 20%;
+    height: 20%;
+    color: white;
+}
+
+.step-item-header span {
+    margin-left: 0.5rem;
+}
+
+.step-item-content {
+    border-left: 2px solid #555;
+    margin-left: 1rem;
+    padding: 1rem;
+    position: absolute;
+    display: block;
+    max-height: auto;
+    left: -10000px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease, max-height 0.5s ease;
+    animation-fill-mode: forwards;
+}
+
+.step-item-content.visible {
+    position: inherit;
+    transform: scaleY(1);
+}
+
+.step-item-content p {
+    margin: 0;
+}
+
+#step-item-control {
+    margin-top: 1rem;
+}
+
+.step-item-control {
+    margin-top: 1rem;
+}
+
+.step-item-content #gauche {
+    float: left;
+    width: 60%;
+}
+
+.step-item-content #droite {
+    margin-left: 60%
+}
+
+p {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.car-from {
+    color: rgb(0, 0, 0);
+    font-style: italic;
+}
+
+div,
+b,
+h2,
+.car-from,
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#info {
+    text-align: center;
+}
+
+.transport {
+    margin-right: 2rem;
+}
