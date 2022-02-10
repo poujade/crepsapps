@@ -59,7 +59,7 @@
     "es6-promise-plugin": "4.2.2",
     "ionicons": "^4.5.6",
     "jquery.scrollto": "^2.1.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "rxjs": "^6.5.1",
     "scroll-to-element": "^2.0.3",
     "zone.js": "^0.9.1"
