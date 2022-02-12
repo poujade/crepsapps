@@ -40,7 +40,7 @@
     "@ionic/vue": "0.0.4",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
-    "ajv": "^6.10.0",
+    "ajv": "^6.12.3",
     "cordova-android": "^8.0.0",
     "cordova-ios": "5.0.1",
     "cordova-plugin-camera": "4.0.3",
